@@ -46,7 +46,7 @@
             <div class="mb-3">
                 <label for="start_date" class="form-label">Start date</label>
                 <input
-                    type="text"
+                    type="date"
                     class="form-control @if ($errors->get('start_date')) is-invalid @endif"
                     id="start_date"
                     name="start_date"
@@ -74,6 +74,15 @@
                     NO
                 </label>
             </div>
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
 
             <button type="submit" class="btn btn-primary mb-3 d-block">CREA</button>
         </form>

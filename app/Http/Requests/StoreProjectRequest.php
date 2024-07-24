@@ -26,7 +26,9 @@ class StoreProjectRequest extends FormRequest
             'title' => 'required|min:5|string',
             'description' => 'string|nullable',
             'start_date' => 'date',
-            'in_progress' => 'between:0,1'
+            'in_progress' => 'between:0,1',
+            'type_id' => 'required',
+
         ];
     }
 }
