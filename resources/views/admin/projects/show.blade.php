@@ -13,6 +13,7 @@
         <h1 class="text-center">{{ $project->title }}</h1>
         <p class="text-center">{{ $project->description }}</p>
         <p>{{ $project->in_progress }}</p>
+        <p>Tipo: {{ $project->type?->name ?: 'non definito' }}</p>
 
     </div>
     
